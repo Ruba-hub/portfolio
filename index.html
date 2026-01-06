@@ -4,29 +4,136 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ruba Imam | Frontend Developer</title>
-
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(-45deg, #f3f4f6, #e5e7eb, #f9fafb, #f3f4f6);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #000000 0%, #374151 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        opacity: 0.4;
+      }
+    </style>
   </head>
-  <body class="bg-gray-50 text-gray-800">
+  <body class="gradient-bg text-gray-800 overflow-x-hidden">
+    <!-- Floating decorative elements -->
+    <div
+      class="dot bg-gray-400 animate-float"
+      style="top: 15%; left: 10%; animation-delay: 0s"
+    ></div>
+    <div
+      class="dot bg-gray-500 animate-float"
+      style="top: 70%; left: 85%; animation-delay: 2s"
+    ></div>
+    <div
+      class="dot bg-gray-400 animate-float"
+      style="top: 40%; left: 90%; animation-delay: 4s"
+    ></div>
+
     <!-- Hero -->
     <section
-      class="min-h-screen flex items-center justify-center text-center px-6"
+      class="min-h-screen flex items-center justify-center text-center px-6 relative"
     >
-      <div>
-        <h1 class="text-4xl md:text-5xl font-bold">Ruba Imam</h1>
-        <p class="mt-4 text-xl">Frontend Web Developer</p>
-        <p class="mt-2 text-gray-600">
-          I build clean, responsive websites for businesses.
+      <div class="max-w-4xl">
+        <!-- Accent line -->
+        <div class="w-20 h-1 bg-black mx-auto mb-8 rounded-full"></div>
+
+        <h1
+          class="text-5xl md:text-7xl font-bold text-gradient mb-6 tracking-tight"
+        >
+          Ruba Imam
+        </h1>
+
+        <p class="text-2xl md:text-3xl font-light mb-4 text-gray-700">
+          Frontend Web Developer
         </p>
 
-        <div class="mt-6 flex justify-center gap-4">
-          <a href="#projects" class="bg-black text-white px-6 py-3 rounded-lg">
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+          I build clean, responsive websites for businesses that want to stand
+          out
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center gap-4 items-center"
+        >
+          <a
+            href="#projects"
+            class="bg-black text-white px-8 py-4 rounded-full font-medium hover-lift w-full sm:w-auto"
+          >
             View My Work
           </a>
-          <a href="#contact" class="border px-6 py-3 rounded-lg">
+          <a
+            href="#contact"
+            class="border-2 border-black px-8 py-4 rounded-full font-medium hover-lift bg-white w-full sm:w-auto"
+          >
             Contact Me
           </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="mt-16 animate-bounce">
+          <svg
+            class="w-6 h-6 mx-auto text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
+          </svg>
         </div>
       </div>
     </section>
