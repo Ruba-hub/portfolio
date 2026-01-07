@@ -39,10 +39,10 @@
       }
 
       .text-gradient {
+        color: #111827; /* fallback */
         background: linear-gradient(135deg, #000000 0%, #374151 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-clip: text;
       }
 
       .hover-lift {
@@ -61,6 +61,13 @@
         border-radius: 50%;
         position: absolute;
         opacity: 0.4;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .animate-float,
+        .animate-bounce,
+        .gradient-bg {
+          animation: none;
+        }
       }
     </style>
   </head>
@@ -98,8 +105,8 @@
         </p>
 
         <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
-          I build clean, responsive websites for businesses that want to stand
-          out
+          I build clean, responsive websites for small businesses using modern
+          web technologies.
         </p>
 
         <div
@@ -134,6 +141,168 @@
               d="M19 14l-7 7m0 0l-7-7m7 7V3"
             ></path>
           </svg>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 relative">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+          <div class="w-16 h-1 bg-black mx-auto mb-6 rounded-full"></div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+            Selected Projects
+          </h2>
+          <p class="text-gray-600 max-w-xl mx-auto">
+            A selection of business-focused websites I’ve designed and built.
+          </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          <!-- Project Card -->
+          <div class="bg-white rounded-2xl p-6 hover-lift">
+            <span
+              class="inline-block text-sm font-medium px-3 py-1 rounded-full bg-green-100 text-green-700 mb-4"
+            >
+              Live Business Website
+            </span>
+
+            <h3 class="text-2xl font-semibold mb-2">Berwick Manor</h3>
+            <p class="text-gray-600 mb-4">
+              Elegant restaurant website designed to showcase dining
+              experiences, events, and reservations.
+            </p>
+
+            <div class="flex gap-4">
+              <a
+                href="https://berwickmanorlounge.co.uk/"
+                target="_blank"
+                class="text-black font-medium hover:underline"
+              >
+                Live Demo →
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="bg-white rounded-2xl p-6 hover-lift">
+            <span
+              class="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200 text-gray-700 mb-4"
+            >
+              Concept Project
+            </span>
+
+            <h3 class="text-2xl font-semibold mb-2">Vas Transport</h3>
+            <p class="text-gray-600 mb-4">
+              Transportation and tours website focused on service clarity and
+              booking-oriented layout.
+            </p>
+
+            <div class="flex gap-4">
+              <a
+                href="https://ruba-hub.github.io/Vas-Transport/"
+                target="_blank"
+                class="text-black font-medium hover:underline"
+              >
+                Live Demo →
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="bg-white rounded-2xl p-6 hover-lift">
+            <span
+              class="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200 text-gray-700 mb-4"
+            >
+              Concept Project
+            </span>
+
+            <h3 class="text-2xl font-semibold mb-2">PrintHub</h3>
+            <p class="text-gray-600 mb-4">
+              Printing business website showcasing services, gallery, and
+              contact information.
+            </p>
+
+            <div class="flex gap-4">
+              <a
+                href="https://ruba-hub.github.io/PrintHub/"
+                target="_blank"
+                class="text-black font-medium hover:underline"
+              >
+                Live Demo →
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="bg-white rounded-2xl p-6 hover-lift">
+            <span
+              class="inline-block text-sm font-medium px-3 py-1 rounded-full bg-gray-200 text-gray-700 mb-4"
+            >
+              Concept Project
+            </span>
+
+            <h3 class="text-2xl font-semibold mb-2">Brookeside School</h3>
+            <p class="text-gray-600 mb-4">
+              School website concept designed to communicate programs,
+              admissions, and school values.
+            </p>
+
+            <div class="flex gap-4">
+              <a
+                href="https://ruba-hub.github.io/Brookeside-school/"
+                target="_blank"
+                class="text-black font-medium hover:underline"
+              >
+                Live Demo →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Section header -->
+        <div class="mb-12">
+          <div class="w-16 h-1 bg-black mx-auto mb-6 rounded-full"></div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+            Let’s Work Together
+          </h2>
+          <p class="text-gray-600 max-w-xl mx-auto">
+            Have a project in mind or need a business website? I’m open to
+            freelance and collaboration opportunities.
+          </p>
+        </div>
+
+        <!-- Contact options -->
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+          <!-- Email -->
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=rubaabdullah993@gmail.com"
+            target="_blank"
+            class="bg-black text-white px-8 py-4 rounded-full font-medium hover-lift"
+          >
+            Email Me
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/Ruba-hub"
+            target="_blank"
+            class="border-2 border-black px-8 py-4 rounded-full font-medium hover-lift bg-white"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://wa.me/256760115415?text=Hello%20Ruba,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20work%20with%20you."
+            target="_blank"
+            class="border-2 border-black px-8 py-4 rounded-full font-medium hover-lift bg-white"
+          >
+            WhatsApp Me
+          </a>
         </div>
       </div>
     </section>
